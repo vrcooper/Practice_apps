@@ -4,18 +4,17 @@
     <title>Example</title>
     <script src="angular.js"></script>
     <script type="text/javascript">
-        
-        var myGlobalVar = "apples";
-        
-        function myFunc(name) {
-            var myLocalVar = "sunny";
-            return ("Hello " + name + ". Today is " + myLocalVar + ".");
+        var myData = {
+            name: "Adam",
+            weather: "sunny",
+            printMessages: function() {
+               console.log("Hello " + this.name + ". ");
+                console.log("Today is " + this.weather + ".");
+                }
         };
-        console.log(myFunc("Adam"));
+        myData.printMessages();
+            
         </script>
-    <script type="text/javascript">
-        console.log("I like " + myGlobalVar);
-    </script>
 </head>
 <body>
     This is a simple example
