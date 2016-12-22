@@ -7,13 +7,16 @@
         var myData = {
             name: "Adam",
             weather: "sunny",
-            printMessages: function() {
-               console.log("Hello " + this.name + ". ");
-                console.log("Today is " + this.weather + ".");
-                }
         };
-        myData.printMessages();
-            
+        
+       
+        
+        var hasName = "name" in myData;
+        var hasDate = "date" in myData;
+        
+        console.log("HasName: " + hasName);
+        console.log("HasDate: " + hasDate);
+        
         </script>
 </head>
 <body>
